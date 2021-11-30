@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagram Using JavaScript</title>
+</head>
+<body>
+    <h2>Anagram Program</h2>
+
+    <script>
+        let isAnagram = function (str1, str2){
+            let sorted1 = str1.split('').sort().join('').toLowerCase();
+            let sorted2 = str2.split('').sort().join('').toLowerCase();
+            return(sorted1 === sorted2);
+        }
+        console.log(isAnagram('hello', 'jello'));
+        console.log(isAnagram('hello', 'loelh'));
+        console.log(isAnagram('race', 'care'));
+        console.log(isAnagram('listen', 'silent'));
+        console.log(isAnagram('aaab', 'abaa', 'baaa', 'aaba'));
+        console.log(isAnagram('aaab', 'aabb'));
+    </script>
+    
+</body>
+</html>
